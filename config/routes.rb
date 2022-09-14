@@ -1,5 +1,9 @@
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
+  namespace :backend do
+    get 'dashboard/index'
+  end
+  
   draw :turbo
 
   # Jumpstart views
@@ -147,5 +151,9 @@ Rails.application.routes.draw do
   end
 
   # Public marketing homepage
-  root to: "static#index"
+  scope module: 'frontend' do
+    resources :frontend, only: :index
+    root to: 'frontend#index'
+  end
+ 
 end

@@ -27,8 +27,8 @@ module.exports = {
     extend: {
       // Create your own at: https://javisperez.github.io/tailwindcolorshades
       colors: {
-        primary: colors.blue,
-        secondary: colors.emerald,
+        primary: "#c69e6a",
+        secondary: "#a2d8ca",
         tertiary: colors.gray,
         danger: colors.red,
         "code-400": "#fefcf9",
